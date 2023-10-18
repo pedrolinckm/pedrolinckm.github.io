@@ -112,7 +112,8 @@
                 </li>
                 <li>Dado um referencial <u>qualquer</u> em um tempo $t$ fixado, o formato de um corpo é um subconjunto
                     $S$
-                    da parte espacial e, neste instante fixado, sua densidade é uma função $\rho_t$ que pega pontos do
+                    da parte espacial e, neste instante fixado, sua densidade é uma função (OBS: não exatamente, visto
+                    que ela pode envolver a delta de Dirac) $\rho_t$ que pega pontos do
                     espaço e nos retorna um número real, só podendo ser não nula em $S$. A <u>massa</u> de um corpo
                     nesse instante é definida como $\displaystyle \int_{S} \rho_t(x,y,z) dV$ e nossa hipótese sobre ela
                     é: independente do referencial e do tempo fixado, esta massa é <u>constante</u>. </li>
@@ -121,16 +122,19 @@
                     regra
                     que as define parcialmente (chamada de primeira lei de Newton). Antes de enunciar a regra, vamos
                     entender alguns conceitos. Dado um
-                    sistema de coordenadas fixo para o espaço-tempo, um <u>movimento de um corpo pontual</u> é definido
+                    sistema de coordenadas fixo para o espaço-tempo, um <u>movimento</u> de um ponto fixado do corpo é
+                    definido
                     por uma
                     curva $t \mapsto (x(t),y(t),z(t))$ -
-                    chamada de <u>trajetória do corpo</u> onde $t$ é a
-                    coordenada temporal e $x,y,z$ são as coordenadas espaciais. O vetor velocidade velocidade do
-                    movimento é definido então
-                    como $\vec{v}(t) = (x'(t),y'(t),z'(t))$. A <u>primeira lei de Newton</u> afirma:
-                    $$\text{O movimento de
-                    um corpo em um referencial inercial possui vetor velocidade constante} \iff \text{O movimento de
-                    um corpo em qualquer referencial inercial possui vetor velocidade constante} \iff \text{A força
+                    chamada muitas vezes de <u>trajetória</u> - onde $t$ é a
+                    coordenada temporal, $x,y,z$ são as coordenadas espaciais e o ponto $(x(t),y(t),z(t))$ sempre está
+                    no formato do corpo. O vetor velocidade velocidade do
+                    movimento do ponto é definido então
+                    como $\vec{v}(t) = (x'(t),y'(t),z'(t))$. A <u>primeira lei de Newton</u> afirma, para um corpo
+                    <u>pontual</u>:
+                    $$\text{O movimento do corpo em um referencial inercial possui vetor velocidade constante} \iff
+                    \text{O movimento do corpo em qualquer referencial inercial possui vetor velocidade constante} \iff
+                    \text{A força
                     resultante sobre o corpo é nula em um referencial inercial}$$
                 </li>
             </ul>
