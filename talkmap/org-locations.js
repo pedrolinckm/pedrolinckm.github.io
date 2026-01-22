@@ -5,6 +5,11 @@ var addressPoints = [
     -118.242766
   ],
   [
+    "Open Quantum Walks simulation<br />Quantum Research Group, Stellenbosch University; Online",
+    43.5904719,
+    3.8595132
+  ],
+  [
     "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
     51.5074456,
     -0.1277653
