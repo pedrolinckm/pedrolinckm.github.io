@@ -1,7 +1,7 @@
 ---
 title: "Dynamics and computation in linear open quantum walks"
 collection: publications
-category: manuscripts
+category: journal
 permalink: /publication/2025-09-26-dynamics-and-computation-in-linear-open-quantum-walks
 excerpt: "We analyze the time evolution and asymptotic behavior of linear open quantum walks as a framework for quantum computation, including representations of random-unitary channels and a locality-inspired simulation protocol with resource advantages."
 date: 2025-09-26
