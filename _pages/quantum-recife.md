@@ -9,11 +9,16 @@ author_profile: true
 {% for t in site.data.quantum_recife.upcoming %}
 **{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
 **{{ t.title }}**  
-{{ t.location }}  
+{{ t.location }}
 
 {{ t.abstract }}
 
-{% if t.slides %}[Slides]({{ t.slides }}){% endif %}{% if t.recording and t.slides %} · {% endif %}{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+{% if t.slides or t.recording %}
+Links:
+{% if t.slides %}[Slides]({{ t.slides }}){% endif %}
+{% if t.slides and t.recording %} · {% endif %}
+{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+{% endif %}
 
 ---
 {% endfor %}
@@ -22,8 +27,10 @@ author_profile: true
 {% for t in site.data.quantum_recife.past %}
 **{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
 **{{ t.title }}**  
-{{ t.location }}  
+{{ t.location }}
 
+{% if t.slides or t.recording %}
+Links:
 {% if t.slides %}[Slides]({{ t.slides }}){% endif %}
 {% if t.slides and t.recording %} · {% endif %}
 {% if t.recording %}[Recording]({{ t.recording }}){% endif %}
