@@ -7,17 +7,20 @@ author_profile: true
 
 ## Upcoming talks
 {% for t in site.data.quantum_recife.upcoming %}
-**{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
-**{{ t.title }}**  
-{{ t.location }}
+### {{ t.title }}
 
+**{{ t.speaker }}** ({{ t.affiliation }})  
+{{ t.date }} — {{ t.location }}
+
+{% if t.abstract and t.abstract != "" %}
 {{ t.abstract }}
+{% endif %}
 
-{% if t.slides or t.recording %}
-Links:
-{% if t.slides %}[Slides]({{ t.slides }}){% endif %}
-{% if t.slides and t.recording %} · {% endif %}
-{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+{% assign slides_ok = t.slides and t.slides != "" %}
+{% assign rec_ok = t.recording and t.recording != "" %}
+
+{% if slides_ok or rec_ok %}
+**Links:**{% if slides_ok %} [Slides]({{ t.slides }}){% endif %}{% if slides_ok and rec_ok %} ·{% endif %}{% if rec_ok %} [Recording]({{ t.recording }}){% endif %}
 {% endif %}
 
 ---
@@ -25,15 +28,20 @@ Links:
 
 ## Past talks
 {% for t in site.data.quantum_recife.past %}
-**{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
-**{{ t.title }}**  
-{{ t.location }}
+### {{ t.title }}
 
-{% if t.slides or t.recording %}
-Links:
-{% if t.slides %}[Slides]({{ t.slides }}){% endif %}
-{% if t.slides and t.recording %} · {% endif %}
-{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+**{{ t.speaker }}** ({{ t.affiliation }})  
+{{ t.date }} — {{ t.location }}
+
+{% if t.abstract and t.abstract != "" %}
+{{ t.abstract }}
+{% endif %}
+
+{% assign slides_ok = t.slides and t.slides != "" %}
+{% assign rec_ok = t.recording and t.recording != "" %}
+
+{% if slides_ok or rec_ok %}
+**Links:**{% if slides_ok %} [Slides]({{ t.slides }}){% endif %}{% if slides_ok and rec_ok %} ·{% endif %}{% if rec_ok %} [Recording]({{ t.recording }}){% endif %}
 {% endif %}
 
 ---
