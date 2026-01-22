@@ -93,3 +93,23 @@ noisy intermediate-scale quantum devices."
     abstract: ""
     slides: ""
     recording: ""
+
+
+      - date: 2024-11-29
+    speaker: "Fernando Parisio"
+    affiliation: "UFPE"
+    title: "Quantum-state texture and gate identification"
+    location: "Auditório"
+    abstract: "We introduce and explore the notion of texture of an arbitrary quantum state, in a selected basis. In the first part of this letter we develop a resource theory and show that state texture is adequately described by an easily computable monotone, which is also directly measurable. It is shown that textures are useful in the characterization of unknown quantum gates in universal circuit layers. By using randomized input states and recording the textures of the output qubits we are able to fully characterize the circuit layer, whenever it contains at least one CNOT gate. This can be done without the need of tomographic protocols and the use of ancillary systems."
+    slides: ""
+    recording: ""
+
+      - date: 2024-09-20
+    speaker: "Pedro Linck Maciel"
+    affiliation: "UFPE"
+    title: "Quantum computation based in open quantum walks"
+    location: "Auditório"
+    abstract: "We show how we can use open quantum walks to perform dissipative quantum computation, study the dynamics of linear open quantum walks, its convergence and steady-state properties, and provide an efficient way with respect to several metrics to perform their simulations on quantum computer."
+    slides: ""
+    recording: ""
+
