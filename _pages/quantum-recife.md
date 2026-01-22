@@ -5,15 +5,26 @@ permalink: /quantum-recife/
 author_profile: true
 ---
 
-A page for the seminar talks and activities of our research group in Recife.
-
 ## Upcoming talks
-- **2026-02-05** — *Speaker Name* (Institution)  
-  **Title:** Talk title here  
-  **Where:** Room / online link  
-  **Abstract:** 2–4 lines.
+{% for t in site.data.quantum_recife.upcoming %}
+**{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
+**{{ t.title }}**  
+{{ t.location }}  
+
+{{ t.abstract }}
+
+{% if t.slides %}[Slides]({{ t.slides }}){% endif %}{% if t.recording and t.slides %} · {% endif %}{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+
+---
+{% endfor %}
 
 ## Past talks
-- **2026-01-15** — *Speaker Name* (Institution)  
-  **Title:** Talk title here  
-  Links: [slides](#) · [recording](#)
+{% for t in site.data.quantum_recife.past %}
+**{{ t.date }}** — *{{ t.speaker }}* ({{ t.affiliation }})  
+**{{ t.title }}**  
+{{ t.location }}  
+
+{% if t.slides %}[Slides]({{ t.slides }}){% endif %}{% if t.recording and t.slides %} · {% endif %}{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+
+---
+{% endfor %}
