@@ -7,7 +7,7 @@ venue: "Universidade Federal de Pernambuco, Mathematics Department"
 location: "Recife, Brazil"
 ---
 
-Differential and Integral Calculus IV undergraduate course given at Universidade Federal de Pernambuco. The lecture notes for this discipline are in portuguese.
+Differential and Integral Calculus IV undergraduate course given at Universidade Federal de Pernambuco during the pandemic. The lecture notes for this discipline are in portuguese, and were developed during online classes.
 
 ## Lecture notes (view online)
 
