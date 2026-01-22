@@ -1,10 +1,10 @@
 upcoming:
-  - date: 2026-02-05
-    speaker: "Speaker Name"
+  - date: 
+    speaker: "Pedro Linck Maciel"
     affiliation: "UFPE"
-    title: "Title of the talk"
-    location: "Room 101 (UFPE) / Online"
-    abstract: "2–4 lines describing the talk."
+    title: "Quantum Mechanics must me complex "
+    location: "Auditório / Online"
+    abstract: "In this seminar I am going to present to Quantum Recife the details of the calculations made by Renou et al. that show the necessity of using complex numbers to have a quantum mechanical theory under reasonably assumptions."
     slides: ""
     recording: ""
 
