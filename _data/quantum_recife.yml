@@ -21,24 +21,24 @@ past:
     location: "Sala C"
     abstract: "In classical thermodynamics, heat must spontaneously flow from hot to cold systems. In quantum thermodynamics, the same law applies when considering multipartite product thermal states evolving unitarily. If initial correlations are present, anomalous heat flow can happen, temporarily making cold thermal states colder and hot thermal states hotter. Such effect can happen due to entanglement, but also because of classical randomness, hence lacking a direct connection with nonclassicality. In this work, we introduce scenarios where anomalous heat flow \emph{does} have a direct link to nonclassicality, defined to be the failure of noncontextual models to explain experimental data. We start by extending known noncontextuality inequalities to a setup where sequential transformations are considered. We then show a class of quantum prepare-transform-measure protocols, characterized by time intervals for a given critical time, where anomalous heat flow happens only if a noncontextuality inequality is violated. We also analyze a recent experiment from Micadei et. al. [Nat. Commun. 10, 2456 (2019)] and find the critical time based on their experimental parameters. We conclude by investigating heat flow in the evolution of two qutrit systems, showing that our findings are not an artifact of using two-qubit systems."
 
-- date: 2025-10-17
-  speaker: "Pedro Medeiros de Moraes"
-  affiliation: "UFPE"
-  title: "Não-Localidade de Bell em um Cenário Espaço-Temporal"
-  location: "Sala B"
-  abstract: >
-    O Teorema de Bell estabelece que as previsões da mecânica quântica para sistemas espacialmente
-    separados são incompatíveis com teorias de variáveis ocultas locais. Análogos temporais deste
-    teorema foram desenvolvidos para correlações de um mesmo sistema em instantes distintos, baseados
-    nas hipóteses de realismo e mensurabilidade não-invasiva. Esta dissertação estende essa investigação
-    para um cenário espaço-temporal, analisando correlações entre medições separadas tanto no espaço
-    quanto no tempo. O trabalho utiliza o formalismo de modelos ontológicos para derivar uma desigualdade
-    CHSH apropriada para este novo cenário e um formalismo de eventos para calcular as previsões quânticas
-    correspondentes. Primeiramente, demonstra-se que a desigualdade espaço-temporal é violada pelas previsões
-    da mecânica quântica, estabelecendo uma nova versão do Teorema de Bell. Em seguida, realiza-se uma comparação
-    numérica entre as violações máximas nos cenários puramente temporal e espaço-temporal para um sistema de dois
-    qubits que evolui a partir de um estado inicial separável. Os resultados revelam que a não-localidade pode se
-    manifestar no cenário espaço-temporal mesmo quando está ausente nos cenários puramente temporal e puramente espacial.
+  - date: 2025-10-17
+    speaker: "Pedro Medeiros de Moraes"
+    affiliation: "UFPE"
+    title: "Não-Localidade de Bell em um Cenário Espaço-Temporal"
+    location: "Sala B"
+    abstract: >
+      O Teorema de Bell estabelece que as previsões da mecânica quântica para sistemas espacialmente
+      separados são incompatíveis com teorias de variáveis ocultas locais. Análogos temporais deste
+      teorema foram desenvolvidos para correlações de um mesmo sistema em instantes distintos, baseados
+      nas hipóteses de realismo e mensurabilidade não-invasiva. Esta dissertação estende essa investigação
+      para um cenário espaço-temporal, analisando correlações entre medições separadas tanto no espaço
+      quanto no tempo. O trabalho utiliza o formalismo de modelos ontológicos para derivar uma desigualdade
+      CHSH apropriada para este novo cenário e um formalismo de eventos para calcular as previsões quânticas
+      correspondentes. Primeiramente, demonstra-se que a desigualdade espaço-temporal é violada pelas previsões
+      da mecânica quântica, estabelecendo uma nova versão do Teorema de Bell. Em seguida, realiza-se uma comparação
+      numérica entre as violações máximas nos cenários puramente temporal e espaço-temporal para um sistema de dois
+      qubits que evolui a partir de um estado inicial separável. Os resultados revelam que a não-localidade pode se
+      manifestar no cenário espaço-temporal mesmo quando está ausente nos cenários puramente temporal e puramente espacial.
 
   - date: 2025-10-03
     speaker: "José Mário da Silva Filho"
@@ -73,7 +73,7 @@ past:
     affiliation: "UFPE"
     title: "Intelligent Open Quantum Systems"
     location: "Auditório"
-    abstract: ""
+    abstract: "Intelligent Open Quantum Systems (IQS) explores how open quantum systems can be leveraged within supervised machine learning frameworks. In this talk, we introduce models inspired by the Interactive Quantum Classifier (IQC) and its Amplitude Information Loading (IQC-AIL) variant, and discuss how these approaches use environment-assisted dynamics for learning and classification tasks."
 
   - date: 2024-11-29
     speaker: "Fernando Parisio"
