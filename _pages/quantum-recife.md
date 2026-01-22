@@ -5,7 +5,7 @@ permalink: /quantum-recife/
 author_profile: true
 ---
 
-This page is a hub for **Quantum Recife** group meetings. Here you’ll find the schedule of upcoming talks and an archive of past talks, including abstracts and—when available—**slides/notes** and **recordings**.
+This page is a hub for **Quantum Recife** group meetings. Here you’ll find the schedule of upcoming talks and an archive of past talks, including abstracts and, when available, **slides/notes** and **recordings**.
 
 ## Upcoming talks
 {% for t in site.data.quantum_recife.upcoming %}
