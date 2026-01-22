@@ -1,14 +1,14 @@
 ---
 title: "Linear Algebra"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "Undergraduate course"
+permalink: /teaching/2021-mathematics-linearalgebra
+venue: "Universidade Federal de Pernambuco, Mathematics Department"
+date: 2021-01-01
+location: "Recife, Brazil"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+#This is a description of a teaching experience. You can use markdown like any other post.
 
 Heading 1
 ======
