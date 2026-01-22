@@ -23,7 +23,7 @@ repository               : "pedrolinckm/pedrolinckm.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/peu.png"
+  avatar           : "profile.png"
   name             : "Pedro Linck Maciel"
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Physics working in the theory of open quantum systems, quantum walks and quantum computation"
