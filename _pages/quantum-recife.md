@@ -24,7 +24,10 @@ author_profile: true
 **{{ t.title }}**  
 {{ t.location }}  
 
-{% if t.slides %}[Slides]({{ t.slides }}){% endif %}{% if t.recording and t.slides %} · {% endif %}{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+{% if t.slides %}[Slides]({{ t.slides }}){% endif %}
+{% if t.slides and t.recording %} · {% endif %}
+{% if t.recording %}[Recording]({{ t.recording }}){% endif %}
+{% endif %}
 
 ---
 {% endfor %}
