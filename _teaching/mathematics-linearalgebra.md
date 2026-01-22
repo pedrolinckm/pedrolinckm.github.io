@@ -8,7 +8,8 @@ location: "Recife, Brazil"
 excerpt: "Linear Algebra undergraduate course at UFPE (lecture notes and materials)."
 ---
 
-Linear Algebra undergraduate course given at Universidade Federal de Pernambuco.
+Linear Algebra undergraduate course given at Universidade Federal de Pernambuco during the pandemic. The lecture notes for this discipline are in portuguese, and were developed during online classes.
+
 
 ## Lecture notes (view online)
 
