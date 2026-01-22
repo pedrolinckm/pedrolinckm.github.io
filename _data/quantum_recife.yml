@@ -1,0 +1,19 @@
+upcoming:
+  - date: 2026-02-05
+    speaker: "Speaker Name"
+    affiliation: "UFPE"
+    title: "Title of the talk"
+    location: "Room 101 (UFPE) / Online"
+    abstract: "2–4 lines describing the talk."
+    slides: ""
+    recording: ""
+
+past:
+  - date: 2026-01-15
+    speaker: "Another Speaker"
+    affiliation: "Institution"
+    title: "Talk title"
+    location: "Room 202"
+    abstract: "Short abstract."
+    slides: "/files/slides/example.pdf"
+    recording: ""
