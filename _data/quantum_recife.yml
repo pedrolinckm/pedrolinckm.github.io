@@ -64,3 +64,32 @@ in quantum simulations of open systems and provides valuable tools for future ex
 noisy intermediate-scale quantum devices."
     slides: ""
     recording: ""
+
+      - date: 2025-06-06
+    speaker: "Thiago Melo de Azevedo"
+    affiliation: "UFPE"
+    title: "Decomposição de operadores quânticos multicontrolados"
+    location: "Sala A"
+    abstract: "Apenas um conjunto de operações elementares podem ser implementados diretamente em dispositivos quânticos. As demais operações precisam ser decompostas em termos dessas operações elementares.  Os dispositivos quânticos atuais são limitados tanto pelo número de qubits quanto pelas operações ruidosas, o que limita o tamanho dos circuitos podem ser executados nesses dispositivos. Dessa forma, o uso de decomposições eficientes é crucial para a utilização prática da computação quântica. O trabalho desenvolvido propôs novas decomposições para operadores multi-controlados SU(2) e U(2) aproximados, com o objetivo de minimizar o número de operações CNOTs no circuito sem necessitar de qubits auxiliares."
+    slides: ""
+    recording: ""
+
+
+
+      - date: 2025-04-11
+    speaker: "Pedro Linck Maciel"
+    affiliation: "UFPE"
+    title: "Photonic Quantum Computation: Applications in chemistry and in quantum walks"
+    location: "Sala A"
+    abstract: "We are going to show some applications of photonic quantum computation to estimating the ground energy and ground state of molecules, and to perform simulations of quantum walks of several particles."
+    slides: ""
+    recording: ""
+
+      - date: 2025-03-14
+    speaker: "João Victor Moreira Cardoso"
+    affiliation: "UFPE"
+    title: "Intelligent Open Quantum Systems"
+    location: "Auditório"
+    abstract: ""
+    slides: ""
+    recording: ""
