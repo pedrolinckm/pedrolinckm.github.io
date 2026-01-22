@@ -2,7 +2,7 @@
 title: "Linear Algebra"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/mathematics-linearalgebra
+permalink: /teaching/mathematics-linearalgebra/
 venue: "Universidade Federal de Pernambuco, Mathematics Department"
 location: "Recife, Brazil"
 ---
@@ -11,16 +11,14 @@ location: "Recife, Brazil"
 
 {% assign tag = "linear-algebra-lectures" %}
 {% for i in (1..17) %}
-- [Lecture {{ i }}](https://github.com/pedrolinckm/pedrolinckm.github.io/releases/download/{{ tag }}/lecture-{{ i }}.pdf)
+- <a href="https://github.com/pedrolinckm/pedrolinckm.github.io/releases/download/{{ tag }}/lecture-{{ i }}.pdf" target="_blank" rel="noopener">Lecture {{ i }}</a>
 {% endfor %}
 
-
+## Course description
 Linear Algebra undergraduate course given at Universidade Federal de Pernambuco.
-Heading 1
-======
 
-Heading 2
-======
+## Syllabus
+- (fill in)
 
-Heading 3
-======
+## References
+- (fill in)
