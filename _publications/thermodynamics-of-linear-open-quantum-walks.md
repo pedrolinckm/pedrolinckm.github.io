@@ -2,8 +2,9 @@
 title: "Thermodynamics of linear open quantum walks"
 collection: publications
 category: inpreparation
-excerpt: "We study the equilibrium and nonequilibrium thermodynamics of linear open quantum walks."
-citation: 'Pedro Linck and Nadja K. Bernardes
+permalink: /publication/2026-01-22-thermodynamics-of-linear-open-quantum-walks
+excerpt: "In this paper we study the equilibrium and nonequilibrium thermodynamic description of linear open quantum walks."
+date: 2026-01-22
+venue: "In preparation"
+paperurl: ""
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
