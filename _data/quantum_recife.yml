@@ -9,11 +9,58 @@ upcoming:
     recording: ""
 
 past:
-  - date: 2026-01-15
-    speaker: "Another Speaker"
-    affiliation: "Institution"
-    title: "Talk title"
-    location: "Room 202"
-    abstract: "Short abstract."
+  - date: 2025-12-11
+    speaker: "Luna Lima e Silva"
+    affiliation: "UFRN"
+    title: "Quantum walk: algoritmos e aplicações"
+    location: "Auditório"
+    abstract: "Random walks foram amplamente utilizados, desde o século passado, na literatura de ciência da computação para responder perguntas sobre grafos e, mais geralmente, conceber novos algoritmos e insights. Nas últimas décadas, os quantum walks demonstraram realizar algumas tarefas de maneira mais eficiente que a caminhada clássica, e, ainda mais surpreendentemente, foi mostrado que quantum walk de partículas interagentes são suficientes para simular computação quântica universal. Quantum walks têm a vantagem de serem facilmente modelados, o que os tornam bons candidatos para serem estudados sob diferentes perspectivas, e possuem complexidade suficiente para que possamos fazer perguntas interessantes do ponto de vista computacional. Nesta apresentação vou relembrar sobre alguns dos diferentes modelos de quantum walk e suas aplições, e falar um pouco mais a fundo do quantum walk com partículas interagentes. Esse modelo é análogo à aproximaçãode tight-binding em matéria condensada, além de ter similaridades com sistemas ópticos com quantum dots, podendo ter aplicações além de algoritmos quânticos."
+    slides: ""
+    recording: ""
+  - date: 2025-11-04
+    speaker: "Naim Elias Comar"
+    affiliation: "UFRN"
+    title: "Contextuality in anomalous heat flow"
+    location: "Sala C"
+    abstract: "In classical thermodynamics, heat must spontaneously flow from hot to cold systems. In quantum thermodynamics, the same law applies when considering multipartite product thermal states evolving unitarily. If initial correlations are present, anomalous heat flow can happen, temporarily making cold thermal states colder and hot thermal states hotter. Such effect can happen due to entanglement, but also because of classical randomness, hence lacking a direct connection with nonclassicality. In this work, we introduce scenarios where anomalous heat flow \emph{does} have a direct link to nonclassicality, defined to be the failure of noncontextual models to explain experimental data. We start by extending known noncontextuality inequalities to a setup where sequential transformations are considered. We then show a class of quantum prepare-transform-measure protocols, characterized by time intervals  for a given critical time , where anomalous heat flow happens only if a noncontextuality inequality is violated. We also analyze a recent experiment from Micadei et. al. [Nat. Commun. 10, 2456 (2019)] and find the critical time  based on their experimental parameters. We conclude by investigating heat flow in the evolution of two qutrit systems, showing that our findings are not an artifact of using two-qubit systems."
+    slides: ""
+    recording: ""
+  - date: 2025-10-17
+    speaker: "Pedro Medeiros de Moraes"
+    affiliation: "UFPE"
+    title: "Não-Localidade de Bell em um Cenário Espaço-Temporal"
+    location: "Sala B"
+    abstract: ""    
+    slides: ""
+    recording: ""
+  - date: 2025-10-03
+    speaker: "José Mário da Silva Filho"
+    affiliation: "UFPE"
+    title: "Local models and Bell inequalities for the minimal triangle network"
+    location: "Sala B"
+    abstract: "Nonlocal correlations created in networks with multiple independent sources enable surprising phenomena in quantum information and quantum foundations. The presence of independent sources, however, makes the analysis of network nonlocality challenging, and even in the simplest nontrivial scenarios a complete characterization is lacking. In this Letter we study one of the simplest of these scenarios, namely that of distributions invariant under permutations of parties in the minimal triangle network, which features no inputs and binary outcomes. We perform an exhaustive search for triangle-local models, and from it we infer analytic expressions for the boundaries of the set of distributions that admit such models, which we conjecture to be all the tight Bell inequalities for the scenario. Armed with them and with improved outer approximations of the set, we provide insights on the existence of a classical-quantum gap in the triangle network with binary outcomes."    
+    slides: ""
+    recording: ""
+  - date: 2025-07-11
+    speaker: "Caio Almeida Leão"
+    affiliation: "UFPE"
+    title: "Efficient Simulation of Open Quantum Systems"
+    location: "Sala A"
+    abstract: "The simulation of open quantum systems is critical for understanding realistic quantum
+processes and for the development of quantum technologies. In this thesis, we propose and
+analyze a suite of efficient techniques to simulate quantum channels on quantum computers.
+We utilize mathematical dilations — including both Sz.-Nagy and Stinespring dilations —
+to embed general non-unitary dynamics into larger-unitary circuits, reducing the overhead of
+open-system simulation. We also introduce a novel divide-and-conquer algorithm for preparing
+arbitrary mixed quantum states, which partitions state preparation into simpler subroutines.
+Additionally, we propose a method to group Kraus operators of a quantum channel to minimize
+circuit depth by exploiting their algebraic structure. Finally, we demonstrate the practical performance
+of these methods by simulating the dynamics of the Fenna-Matthews-Olson (FMO)
+photosynthetic complex on IBM’s real quantum hardware. The results show that our techniques
+enable accurate and resource-efficient simulation of open-system dynamics, achieving
+high fidelity in the presence of hardware noise and significantly reducing quantum-resource
+requirements compared to previous implementations. This work advances the state of the art
+in quantum simulations of open systems and provides valuable tools for future experiments on
+noisy intermediate-scale quantum devices."
     slides: ""
     recording: ""
