@@ -19,6 +19,9 @@ main:
             
   - title: "CV"
     url: /cv/
-    
+
+  - title: "Quantum Recife"
+    url: /quantum-recife/
+
   # - title: "CV"
   #   url: /cv-json/
