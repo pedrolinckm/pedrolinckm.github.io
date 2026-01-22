@@ -3,8 +3,9 @@ title: "Open Quantum Walks simulation"
 collection: talks
 type: "Talk"
 permalink: /talks/2024-11-29-talk-oqw-simulation
-venue: "Online and Physics Seminar Room, Stellenbosch University"
+venue: "Quantum Research Group, Stellenbosch University"
 date: 2024-11-29
+location: "Online"
 ---
 
 In this talk we are going to explore a simple topology for the Open Quantum Walk model of Quantum
