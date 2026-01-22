@@ -27,8 +27,11 @@ Work experience
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% if post.category == "inpreparation" %}
+    {% continue %}
+  {% endif %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
   
 Talks
 ======
