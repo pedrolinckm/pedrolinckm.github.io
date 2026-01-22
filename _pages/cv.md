@@ -11,36 +11,19 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Physics, Universidade Federal de Pernambuco, 2028 (expected)
+* M.S. in Mathematics, Universidade Federal de Pernambuco, 2023
+* B.S. in Physics, Universidade Federal de Pernambuco, 2023
+* B.S. in Mathematics, Universidade Federal de Pernambuco, 2020
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2025-Now: Substitute Professor
+  * Physics Department, Universidade Federal de Pernambuco
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
+* 2021: Substitute Professor
+  * Mathematics Department, Universidade Federal de Pernambuco
+  
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
@@ -58,7 +41,3 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
