@@ -1,7 +1,7 @@
 ---
 title: "Divide-and-Conquer Simulation of Open Quantum Systems"
 collection: publications
-category: manuscripts
+category: preprints
 permalink: /publication/2025-05-02-divide-and-conquer-simulation-of-open-quantum-systems
 excerpt: "We propose a divide-and-conquer strategy to prepare mixed states and combine the outputs of Kraus-operator dilations to simulate open-system dynamics on quantum hardware with reduced circuit depth, including a balanced grouping trade-off and a proof-of-concept simulation of the Fenna–Matthews–Olson dynamics."
 date: 2025-05-02
