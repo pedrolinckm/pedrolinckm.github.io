@@ -28,5 +28,6 @@ Current interests
 
 - **Open quantum systems**  
 - **Quantum thermodynamics**
+- **Efficient simulation of open quantum systems**
 - **Dissipative quantum computation**
 - **Quantum walks**
