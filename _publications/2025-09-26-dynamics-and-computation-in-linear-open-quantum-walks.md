@@ -3,7 +3,7 @@ title: "Dynamics and computation in linear open quantum walks"
 collection: publications
 category: journal
 permalink: /publication/2025-09-26-dynamics-and-computation-in-linear-open-quantum-walks
-excerpt: "We analyze the time evolution and asymptotic behavior of linear open quantum walks as a framework for quantum computation, including representations of random-unitary channels and a locality-inspired simulation protocol with resource advantages."
+excerpt: "Open quantum walks (OQWs) are a type of quantum walk governed by the system's interaction with its environment. We explore the time evolution and the limit behavior of the OQW framework for quantum computation and show how we can represent random unitary quantum channels, such as the dephasing and depolarizing channels, in this model. We also develop a simulation protocol with circuit representation for this model, which is heavily inspired by the fact that graphs represent OQWs and are thereby local (meaning that the state in a particular node interacts only with its neighborhood). We obtain asymptotic advantages in the system's dimension, circuit depth, and cnot count compared to other simulation methods."
 date: 2025-09-26
 venue: "Physical Review A"
 slidesurl: ""
