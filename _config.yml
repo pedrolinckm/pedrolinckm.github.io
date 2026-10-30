@@ -8,11 +8,11 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "linck" # tema próprio (_sass/theme/_linck_*.scss); também existem "default", "air", "sunrise", "mint", "dirt" e "contrast"
 title                    : "Pedro Linck Maciel"
 title_separator          : "-"
 name                     : "Pedro Linck Maciel"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Pedro Linck Maciel: PhD student in Physics at UFPE working on open quantum systems, open quantum walks, quantum thermodynamics and dissipative quantum computation."
 url                      : https://pedrolinckm.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -88,8 +88,12 @@ publication_category:
     title: "Journal Articles"
   preprints:
     title: "Preprints"
+  conference:
+    title: "Conference Papers"
   inpreparation:
     title: "In preparation"
+  other:
+    title: "Other"
     
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -190,6 +194,10 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - README.md
+  - COMO-ATUALIZAR.md
+  - scripts
+  - markdown_generator
   - tmp
   - vendor
 keep_files:
@@ -231,6 +239,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  simulations:
     output: true
     permalink: /:collection/:path/
 
@@ -282,6 +293,14 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _simulations
+  - scope:
+      path: ""
+      type: simulations
+    values:
+      layout: single
+      author_profile: false
+      wide: true
   # _talks
   - scope:
       path: ""

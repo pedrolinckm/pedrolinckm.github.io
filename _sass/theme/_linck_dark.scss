@@ -1,0 +1,66 @@
+/* ==========================================================================
+   LINCK THEME - DARK
+   ========================================================================== */
+
+$primary-color              : #93a4ff;
+$background                 : #0d1220;
+$background-light           : #151b2c;
+$background-lighter         : #1c2336;
+$text                       : #e4e8f1;
+$text-muted                 : #9aa3b5;
+$link                       : #93a4ff;
+$link-dark                  : #c3ccff;
+$link-light                 : #b5c1ff;
+$footer                     : #0a0e19;
+$border                     : #252d42;
+$border-light               : #39425a;
+$selection-bg               : #2d3a6e;
+$selection-text             : #ffffff;
+
+$danger-color               : #ff7a85;
+$info-color                 : #93a4ff;
+$notice-color               : #9aa3b5;
+$success-color              : #6fd3a0;
+$warning-color              : #f0b45a;
+
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 2px rgba(0, 0, 0, 0.3);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+html[data-theme="dark"] {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-light};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$text};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$background-lighter};
+  --global-toc-bg-color               : #{$background-light};
+  --global-selection-bg-color         : #{$selection-bg};
+  --global-selection-text-color       : #{$selection-text};
+
+  --linck-panel-bg                    : #151b2c;
+  --linck-canvas-bg                   : #0a0e19;
+  --linck-plot-grid                   : #252d42;
+  --linck-accent-soft                 : #1d2650;
+  --linck-link-underline              : rgba(147, 164, 255, 0.45);
+}
+
+html[data-theme="dark"] ::selection {
+  background-color: var(--global-selection-bg-color);
+  color: var(--global-selection-text-color);
+}

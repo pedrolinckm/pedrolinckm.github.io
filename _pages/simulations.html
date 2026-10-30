@@ -1,0 +1,23 @@
+---
+layout: archive
+title: "Simulations"
+permalink: /simulations/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>Small interactive models of physical systems. They run in the browser, so you can change the parameters and watch what happens.</p>
+
+{% assign sims = site.simulations | sort: "order" %}
+<div class="sim-gallery">
+{% for sim in sims %}
+  <a class="sim-card" href="{{ base_path }}{{ sim.url }}">
+    <div class="sim-card__thumb">
+      {% if sim.thumbnail %}<img src="{{ base_path }}{{ sim.thumbnail }}" alt="" loading="lazy">{% endif %}
+    </div>
+    <h2 class="sim-card__title">{{ sim.title }}</h2>
+    <p class="sim-card__text">{{ sim.excerpt | markdownify | strip_html | strip }}</p>
+  </a>
+{% endfor %}
+</div>

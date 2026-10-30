@@ -20,6 +20,7 @@ This website is a hub for my research and academic activities, all of which can 
 - **Publications**: a curated list of my work, organized into **published papers**, **preprints**, and **in-preparation manuscripts**, each with links (PDF/arXiv/journal) when available.
 - **Talks**: slides, abstracts, and (when available) recordings or materials from seminars, colloquia, and conference presentations.
 - **Teaching**: course pages with syllabi, lecture notes, problem sets, and other resources for students.
+- **Simulations**: interactive models of physical systems that run in your browser, from the N-body problem to the cosmic microwave background.
 - **CV**: a compact academic CV.
 - **Quantum Recife**: the page of our local quantum group-sharing our research directions, study topics, meetings, and group activities.
 

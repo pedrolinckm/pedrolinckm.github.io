@@ -1,0 +1,58 @@
+name: Sincronizar publicações
+
+# Busca trabalhos novos no ORCID, no arXiv e (opcionalmente) no Google Scholar
+# e atualiza _publications/. Roda todo dia e também pelo botão "Run workflow"
+# na aba Actions.
+
+on:
+  schedule:
+    - cron: "17 9 * * *"   # todo dia, 06:17 no horário de Recife
+  workflow_dispatch:
+
+permissions:
+  contents: write   # para commitar as publicações novas
+  pages: write      # para pedir um novo build do site
+
+concurrency:
+  group: sync-publications
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install pyyaml
+
+      - name: Sincronizar
+        env:
+          # Opcional. Crie em Settings > Secrets and variables > Actions.
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/sync_publications.py
+
+      - name: Commitar mudanças
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain _publications)" ]; then
+            echo "Nenhuma publicação nova."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _publications
+          git commit -m "Atualiza publicações (ORCID/arXiv/Scholar)"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Reconstruir o site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "O GitHub Pages vai reconstruir pelo próprio push."

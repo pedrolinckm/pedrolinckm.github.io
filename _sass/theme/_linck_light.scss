@@ -1,0 +1,72 @@
+/* ==========================================================================
+   LINCK THEME - LIGHT
+   Papel frio, tinta azul-ardósia e um acento ultramarino.
+   ========================================================================== */
+
+$primary-color              : #2e44c4;
+$dark-primary-color         : mix(#000, $primary-color, 30%);
+$darker-primary-color       : mix(#000, $primary-color, 55%);
+$light-primary-color        : mix(#fff, $primary-color, 50%);
+$lighter-primary-color      : mix(#fff, $primary-color, 90%);
+$background                 : #fcfcfd;
+$background-light           : #f3f4f8;
+$background-lighter         : #ffffff;
+$text                       : #1b2230;
+$text-muted                 : #5a6375;
+$link                       : #2e44c4;
+$link-dark                  : #1f2e8f;
+$link-light                 : #4a5fd6;
+$footer                     : #f3f4f8;
+$border                     : #e3e6ee;
+$border-dark                : #c5cad6;
+$selection-bg               : #d9defb;
+$selection-text             : #1b2230;
+
+$danger-color               : #c42e3c;
+$info-color                 : #2e44c4;
+$notice-color               : #5a6375;
+$success-color              : #1f7a4d;
+$warning-color              : #b26a00;
+
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 2px rgba(27, 34, 48, 0.08);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-dark};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$text};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$background-light};
+  --global-toc-bg-color               : #{$background-light};
+  --global-selection-bg-color         : #{$selection-bg};
+  --global-selection-text-color       : #{$selection-text};
+
+  /* usados pelo tema e pelas simulações */
+  --linck-panel-bg                    : #f3f4f8;
+  --linck-canvas-bg                   : #ffffff;
+  --linck-plot-grid                   : #e3e6ee;
+  --linck-accent-soft                 : #e8ebfb;
+  --linck-link-underline              : rgba(46, 68, 196, 0.4);
+}
+
+::selection {
+  background-color: var(--global-selection-bg-color);
+  color: var(--global-selection-text-color);
+}

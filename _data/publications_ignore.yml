@@ -1,0 +1,6 @@
+# Trabalhos que o sincronizador de publicações deve ignorar.
+# Um por linha: título, DOI (10.xxxx/...) ou ID do arXiv (2505.01623).
+# Exemplo:
+# - "Título de algo que não quero no site"
+# - 10.1234/abcd.5678
+# - 2401.00001

@@ -13,4 +13,10 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+<!-- Simulações: scripts da página -->
+{% if page.sim_script %}
+<script defer src="{{ base_path }}/assets/simulations/sim-common.js"></script>
+<script defer src="{{ base_path }}/assets/simulations/{{ page.sim_script }}"></script>
+{% endif %}
+
 <!-- end custom footer snippets -->

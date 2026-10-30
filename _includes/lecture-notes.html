@@ -1,0 +1,89 @@
+{%- comment -%}
+  Lista as notas de aula de um curso, sem precisar editar nada além de
+  subir os PDFs.
+
+  Na página do curso (_teaching/*.md), no front matter:
+      lecture_notes: linear-algebra            # pasta lecture-notes/linear-algebra/
+      lecture_notes_data: lectures_linear_algebra   # opcional: lista antiga em _data/
+  e no corpo, onde a lista deve aparecer:
+      {% include lecture-notes.html %}
+
+  Cada PDF em lecture-notes/<pasta>/ vira um item. O título é o nome do
+  arquivo ("03 - Espaços vetoriais.pdf" -> "03 - Espaços vetoriais";
+  "lecture-3.pdf" -> "Lecture 3"). A ordem é por nome, com números
+  comparados como números (2 vem antes de 10).
+{%- endcomment -%}
+
+{%- assign ln_folder = include.folder | default: page.lecture_notes -%}
+{%- assign ln_data_key = include.data | default: page.lecture_notes_data -%}
+{%- assign ln_count = 0 -%}
+
+<ul class="lecture-notes">
+{%- if ln_data_key -%}
+  {%- assign ln_data = site.data[ln_data_key] -%}
+  {%- for item in ln_data -%}
+    {%- if item.title -%}
+      {%- assign ln_title = item.title -%}
+    {%- else -%}
+      {%- assign ln_title = "Lecture " | append: item.n -%}
+    {%- endif -%}
+    {%- if item.pdf contains "/releases/download/" -%}
+      {%- capture ln_href -%}https://docs.google.com/gview?embedded=1&url={{ item.pdf | uri_escape }}{%- endcapture -%}
+    {%- else -%}
+      {%- assign ln_href = item.pdf -%}
+    {%- endif -%}
+  <li><a href="{{ ln_href }}" target="_blank" rel="noopener">{{ ln_title }}</a></li>
+    {%- assign ln_count = ln_count | plus: 1 -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if ln_folder -%}
+  {%- assign ln_clean = ln_folder | remove_first: "lecture-notes/" | remove_first: "/lecture-notes/" -%}
+  {%- assign ln_prefix = "/lecture-notes/" | append: ln_clean | append: "/" -%}
+  {%- assign ln_prefix_size = ln_prefix | size -%}
+  {%- assign ln_entries = "" -%}
+
+  {%- for f in site.static_files -%}
+    {%- assign ln_head = f.path | slice: 0, ln_prefix_size -%}
+    {%- if ln_head != ln_prefix -%}{%- continue -%}{%- endif -%}
+    {%- assign ln_ext = f.extname | downcase -%}
+    {%- if ln_ext != ".pdf" -%}{%- continue -%}{%- endif -%}
+
+    {%- comment -%} chave de ordenação: números com zeros à esquerda {%- endcomment -%}
+    {%- assign ln_tokens = f.basename | downcase | replace: "_", "-" | replace: " ", "-" | split: "-" -%}
+    {%- assign ln_key = "" -%}
+    {%- for tok in ln_tokens -%}
+      {%- assign ln_num = tok | plus: 0 | append: "" -%}
+      {%- assign ln_tok = tok -%}
+      {%- if ln_num == tok -%}
+        {%- assign ln_tok = "000000" | append: tok | slice: -6, 6 -%}
+      {%- endif -%}
+      {%- assign ln_key = ln_key | append: ln_tok | append: "-" -%}
+    {%- endfor -%}
+
+    {%- if f.basename contains " " -%}
+      {%- assign ln_name = f.basename | replace: "_", " " -%}
+    {%- else -%}
+      {%- assign ln_name = f.basename | replace: "_", " " | replace: "-", " " -%}
+    {%- endif -%}
+    {%- assign ln_name = ln_name | split: " " | join: " " -%}
+    {%- assign ln_first = ln_name | slice: 0 | upcase -%}
+    {%- assign ln_rest = ln_name | slice: 1, 1000 -%}
+    {%- assign ln_name = ln_first | append: ln_rest -%}
+
+    {%- assign ln_entries = ln_entries | append: ln_key | append: "|~|" | append: f.path | append: "|~|" | append: ln_name | append: "~~~" -%}
+  {%- endfor -%}
+
+  {%- assign ln_sorted = ln_entries | split: "~~~" | sort -%}
+  {%- for e in ln_sorted -%}
+    {%- assign ln_parts = e | split: "|~|" -%}
+    {%- if ln_parts.size < 3 -%}{%- continue -%}{%- endif -%}
+  <li><a href="{{ site.baseurl }}{{ ln_parts[1] | uri_escape }}" target="_blank" rel="noopener">{{ ln_parts[2] }}</a></li>
+    {%- assign ln_count = ln_count | plus: 1 -%}
+  {%- endfor -%}
+{%- endif -%}
+</ul>
+
+{%- if ln_count == 0 -%}
+<p><em>No lecture notes uploaded yet.</em></p>
+{%- endif -%}

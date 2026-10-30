@@ -1,0 +1,237 @@
+/* ==========================================================================
+   LINCK: refinamentos visuais sobre o AcademicPages
+   Spectral para leitura, sans do sistema para navegação e controles.
+   Um único elemento marcante: a faixa do espectro visível sob o cabeçalho.
+   ========================================================================== */
+
+$linck-serif: "Spectral", Georgia, "Times New Roman", serif;
+
+/* Faixa espectral: cores sRGB aproximadas de 400 a 690 nm */
+$linck-spectrum: linear-gradient(90deg,
+  #6a1ea8 0%, #3b2fe6 10%, #0a6cf0 22%, #00a6d6 32%, #00b86e 44%,
+  #6cc400 54%, #d8d000 63%, #ffa400 73%, #ff5a1a 84%, #d81f1f 94%, #a10f1f 100%);
+
+/* ---- tipografia ---------------------------------------------------------- */
+
+body {
+  color: var(--global-text-color);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page__title,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.archive h1,
+.archive h2,
+.archive h3,
+.author__name {
+  font-family: $linck-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.page__title {
+  font-size: 2.1em;
+  line-height: 1.15;
+  margin-bottom: 0.4em;
+}
+
+.page__content,
+.archive {
+  font-family: $linck-serif;
+  font-size: 1.06em;
+  line-height: 1.65;
+
+  p, li { max-width: 70ch; }
+}
+
+.page__content h2,
+.archive h2 {
+  font-size: 1.45em;
+  margin-top: 1.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.archive h2 + hr { display: none; }
+
+.page__content h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+.page__content a,
+.archive a {
+  color: var(--global-link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--linck-link-underline);
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--global-base-color);
+  outline-offset: 2px;
+}
+
+/* ---- cabeçalho ----------------------------------------------------------- */
+
+.masthead {
+  border-bottom: none;
+
+  &::after {
+    height: 3px;
+    background: $linck-spectrum;
+  }
+}
+
+.masthead__inner-wrap {
+  padding-top: 0.65em;
+  padding-bottom: 0.75em;
+}
+
+.masthead__menu-item a {
+  color: var(--global-text-color-light);
+  font-size: 0.92em;
+  transition: color 0.15s ease;
+
+  &:hover { color: var(--global-base-color); }
+}
+
+.masthead__menu-item--lg a {
+  font-family: $linck-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--global-text-color);
+  letter-spacing: -0.01em;
+}
+
+.masthead__menu-item.selected a,
+.masthead__menu-item.selected a:hover {
+  color: var(--global-text-color);
+  font-weight: 600;
+  border-bottom: 2px solid var(--global-base-color);
+}
+
+.masthead__menu-item--lg.selected a,
+.masthead__menu-item--lg.selected a:hover {
+  border-bottom: none;
+}
+
+/* ---- barra lateral ------------------------------------------------------- */
+
+.author__avatar img {
+  border-radius: 50%;
+  border: 1px solid var(--global-border-color);
+  padding: 4px;
+  background: var(--global-bg-color);
+}
+
+.sidebar .author__name,
+.author__name {
+  font-family: $linck-serif;
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+
+.author__bio {
+  color: var(--global-text-color-light);
+  line-height: 1.45;
+}
+
+.author__urls a {
+  color: var(--global-text-color);
+
+  &:hover { color: var(--global-base-color); }
+}
+
+/* ---- listas (publicações, talks, teaching) ------------------------------- */
+
+.archive .archive__item-title,
+.archive__item-title {
+  font-family: $linck-serif;
+  font-size: 1.12em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.4em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+
+  a { text-decoration: none; color: var(--global-text-color); }
+  a:hover { color: var(--global-base-color); text-decoration: underline; }
+}
+
+.archive .archive__item-title + p,
+.archive__item .page__date {
+  font-family: $sans-serif;
+  font-size: 0.82em;
+  color: var(--global-text-color-light);
+  margin: 0.15em 0 0.35em;
+}
+
+.archive__item-excerpt {
+  font-size: 0.92em;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+  max-width: 70ch;
+
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+/* ---- notas de aula ------------------------------------------------------- */
+
+.lecture-notes {
+  columns: 2 14em;
+  column-gap: 2em;
+  padding-left: 1.2em;
+
+  li { break-inside: avoid; margin-bottom: 0.2em; }
+}
+
+/* ---- rodapé -------------------------------------------------------------- */
+
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+  font-size: 0.9em;
+}
+
+/* ---- páginas largas (simulações) ----------------------------------------- */
+
+#main.main--wide {
+  max-width: 1180px;
+
+  .page {
+    @include breakpoint($large) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      float: none;
+    }
+  }
+
+  .page__content p,
+  .page__content li { max-width: 72ch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .masthead, #main { animation: none !important; }
+}
+
+/* equações longas rolam de lado no celular em vez de alargar a página */
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.1em 0;
+}
