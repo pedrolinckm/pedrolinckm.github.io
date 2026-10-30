@@ -7,6 +7,61 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+<p>Courses I have taught at the Universidade Federal de Pernambuco, all in Portuguese. Each course page has the slides and lecture notes I wrote for it.</p>
+
+{% assign all_courses = site.teaching | sort: "date" | reverse %}
+{% assign departments = "physics|mathematics" | split: "|" %}
+
+{% for dept in departments %}
+  {% if dept == "physics" %}
+    {% assign dept_courses = all_courses | where: "department", "physics" %}
+    {% assign dept_title = "Physics Department" %}
+    {% assign dept_role = "Substitute professor, 2024 to present" %}
+  {% else %}
+    {% assign dept_courses = all_courses | where: "department", "math" %}
+    {% assign dept_title = "Mathematics Department" %}
+    {% assign dept_role = "Substitute professor, 2020 to 2021 (remote teaching during the pandemic)" %}
+  {% endif %}
+  {% if dept_courses.size == 0 %}{% continue %}{% endif %}
+
+<h2>{{ dept_title }}</h2>
+<p class="teaching-role">{{ dept_role }}</p>
+<ul class="course-list">
+  {% for c in dept_courses %}
+    {%- assign n_files = 0 -%}
+    {%- if c.lecture_notes_data -%}{%- assign n_files = site.data[c.lecture_notes_data].size -%}{%- endif -%}
+    {%- if c.lecture_notes -%}
+      {%- assign prefix = "/lecture-notes/" | append: c.lecture_notes | append: "/" -%}
+      {%- assign prefix_size = prefix | size -%}
+      {%- for f in site.static_files -%}
+        {%- assign head = f.path | slice: 0, prefix_size -%}
+        {%- assign ext = f.extname | downcase -%}
+        {%- if head == prefix and ext == ".pdf" -%}{%- assign n_files = n_files | plus: 1 -%}{%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  <li class="course">
+    <a class="course__title" href="{{ base_path }}{{ c.url }}">{{ c.title }}</a>
+    <span class="course__pt">{{ c.title_pt }}{% if c.code %}, {{ c.code }}{% endif %}</span>
+    <span class="course__meta">{{ c.semesters | join: ", " }}{% if n_files > 0 %}<span class="course__files">{{ n_files }} {% if n_files == 1 %}file{% else %}files{% endif %}</span>{% endif %}</span>
+  </li>
+  {% endfor %}
+</ul>
 {% endfor %}
+
+{% if site.data.teaching_other.assistant %}
+<h2>Teaching assistant</h2>
+<ul class="course-list course-list--plain">
+  {% for a in site.data.teaching_other.assistant %}
+  <li class="course"><span class="course__name">{{ a.course }}</span><span class="course__pt">{{ a.place }}</span><span class="course__meta">{{ a.years }}</span></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.data.teaching_other.short_courses %}
+<h2>Short courses</h2>
+<ul class="course-list course-list--plain">
+  {% for s in site.data.teaching_other.short_courses %}
+  <li class="course"><span class="course__name">{{ s.title }}</span><span class="course__pt">{{ s.note }}</span><span class="course__meta">{{ s.year }}</span></li>
+  {% endfor %}
+</ul>
+{% endif %}

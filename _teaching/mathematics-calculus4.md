@@ -1,17 +1,22 @@
 ---
-title: "Differential and Integral Calculus IV: Differential equations"
+title: "Differential and Integral Calculus 4"
+title_pt: "Cálculo Diferencial e Integral 4"
+code: MA129
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2021-mathematics-calculus4
+department: math
 venue: "Universidade Federal de Pernambuco, Mathematics Department"
 location: "Recife, Brazil"
-excerpt: "Differential equations undergraduate course at UFPE (lecture notes and materials)."
+semesters: ["2020.2"]
+date: 2020-08-01
+permalink: /teaching/2021-mathematics-calculus4
+excerpt: "Ordinary differential equations. Full set of lecture notes (in Portuguese)."
 lecture_notes: calculus-4
 lecture_notes_data: lectures_calculus_4
 ---
 
-Differential and Integral Calculus IV undergraduate course given at Universidade Federal de Pernambuco during the pandemic. The lecture notes for this discipline are in portuguese, and were developed during online classes.
+Taught in Portuguese, during the pandemic, as a substitute professor in the Mathematics Department of UFPE. The lecture notes were written for the online classes.
 
-## Lecture notes (view online)
+## Slides and lecture notes
 
 {% include lecture-notes.html %}

@@ -235,3 +235,115 @@ mjx-container[display="true"] {
   overflow-y: hidden;
   padding: 0.1em 0;
 }
+
+/* ---- publicações: meta, links e resumo expansível ------------------------ */
+
+.pub-meta {
+  font-family: $sans-serif;
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+  margin: 0.15em 0 0.4em;
+}
+
+.page__inner-wrap header .pub-meta,
+.page__subtitle {
+  font-family: $sans-serif;
+  font-size: 0.92em;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+  margin: -0.2em 0 1.2em;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em 1.1em;
+  font-family: $sans-serif;
+  font-size: 0.82em;
+  margin: 0.35em 0 0;
+}
+
+.page__content .pub-links { font-size: 0.92em; margin: 1.2em 0; }
+
+.pub-citation {
+  font-size: 0.9em;
+  color: var(--global-text-color-light);
+}
+
+.archive__item-excerpt.is-open p {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.excerpt-toggle {
+  font-family: $sans-serif;
+  font-size: 0.8em;
+  padding: 0;
+  margin-top: 0.25em;
+  border: 0;
+  background: none;
+  color: var(--global-link-color);
+  cursor: pointer;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* ---- página Teaching ---------------------------------------------------- */
+
+.teaching-role {
+  font-family: $sans-serif;
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+  margin: -0.4em 0 0.6em;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+.archive .course-list li.course,
+.course-list .course {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "title meta" "pt meta";
+  column-gap: 1.5em;
+  padding: 0.6em 0;
+  margin: 0;
+  max-width: none;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.course__title,
+.course__name {
+  grid-area: title;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.archive .course__title { text-decoration: none; color: var(--global-text-color); }
+.archive .course__title:hover { color: var(--global-base-color); text-decoration: underline; }
+
+.course__pt {
+  grid-area: pt;
+  font-family: $sans-serif;
+  font-size: 0.8em;
+  color: var(--global-text-color-light);
+}
+
+.course__meta {
+  grid-area: meta;
+  align-self: center;
+  text-align: right;
+  font-family: $sans-serif;
+  font-size: 0.82em;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.course__files {
+  display: block;
+  color: var(--global-base-color);
+}

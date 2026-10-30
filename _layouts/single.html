@@ -35,7 +35,12 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p class="page__subtitle">
+            {% if page.title_pt %}{{ page.title_pt }}{% if page.code %} ({{ page.code }}){% endif %}<br>{% endif %}
+            {{ page.type }}, <i>{{ page.venue }}</i>{% if page.semesters %}. Taught in {{ page.semesters | join: ", " }}{% else %}, {{ page.date | date: "%Y" }}{% endif %}.
+          </p>
+        {% elsif page.collection == 'publications' %}
+          {% include publication-meta.html pub=page %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date and page.collection != 'simulations' %}
@@ -45,6 +50,17 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.collection == 'publications' %}
+          {% if page.excerpt and page.excerpt != "" %}
+            <h2>Abstract</h2>
+            <div class="pub-abstract">{{ page.excerpt | markdownify }}</div>
+          {% endif %}
+          {{ content }}
+          {% include publication-links.html pub=page %}
+          {% if page.citation and page.citation != "" %}
+            <p class="pub-citation">Recommended citation: {{ page.citation }}</p>
+          {% endif %}
+        {% else %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
@@ -71,6 +87,7 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
         {% elsif page.bibtexurl %}
           <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% endif %}
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

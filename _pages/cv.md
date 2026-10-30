@@ -41,6 +41,7 @@ Talks
   
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
+  {% assign teaching_sorted = site.teaching | sort: "date" | reverse %}
+  <ul>{% for post in teaching_sorted %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

@@ -13,5 +13,3 @@ auto_sync: true
 sync_sources:
 - arxiv
 ---
-
-- [arXiv:2608.07695](https://arxiv.org/abs/2608.07695)

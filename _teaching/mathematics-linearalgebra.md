@@ -1,18 +1,22 @@
 ---
-title: "Linear Algebra"
+title: "Linear Algebra 1"
+title_pt: "Álgebra Linear 1"
+code: MA046
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/mathematics-linearalgebra/
+department: math
 venue: "Universidade Federal de Pernambuco, Mathematics Department"
 location: "Recife, Brazil"
-excerpt: "Linear Algebra undergraduate course at UFPE (lecture notes and materials)."
+semesters: ["2021.1"]
+date: 2021-03-01
+permalink: /teaching/mathematics-linearalgebra/
+excerpt: "Vector spaces, linear maps and diagonalization. Full set of lecture notes (in Portuguese)."
 lecture_notes: linear-algebra
 lecture_notes_data: lectures_linear_algebra
 ---
 
-Linear Algebra undergraduate course given at Universidade Federal de Pernambuco during the pandemic. The lecture notes for this discipline are in portuguese, and were developed during online classes.
+Taught in Portuguese, during the pandemic, as a substitute professor in the Mathematics Department of UFPE. The lecture notes were written for the online classes.
 
-
-## Lecture notes (view online)
+## Slides and lecture notes
 
 {% include lecture-notes.html %}

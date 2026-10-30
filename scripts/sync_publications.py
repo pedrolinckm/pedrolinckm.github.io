@@ -543,12 +543,8 @@ def build_meta(rec: Record, old: dict | None = None) -> dict:
 
 
 def body_for(rec: Record) -> str:
-    links = []
-    if rec.doi:
-        links.append(f"[Published version (DOI: {rec.doi})](https://doi.org/{rec.doi})")
-    if rec.arxiv:
-        links.append(f"[arXiv:{rec.arxiv}](https://arxiv.org/abs/{rec.arxiv})")
-    return "\n".join(f"- {l}" for l in links)
+    """Corpo do arquivo: vazio. O layout já mostra resumo e links (DOI, arXiv)."""
+    return ""
 
 
 # --------------------------------------------------------------------------

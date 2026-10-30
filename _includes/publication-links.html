@@ -1,0 +1,13 @@
+{%- assign pub = include.pub -%}
+{%- capture pub_links -%}
+  {%- assign purl = pub.paperurl | default: "" -%}
+  {%- if pub.doi and pub.doi != "" -%}<a href="https://doi.org/{{ pub.doi }}">Journal version</a>
+  {%- elsif purl contains "doi.org" -%}<a href="{{ purl }}">Journal version</a>
+  {%- elsif purl != "" and purl contains "arxiv.org" -%}{%- unless pub.arxiv -%}<a href="{{ purl }}">arXiv</a>{%- endunless -%}
+  {%- elsif purl != "" -%}<a href="{{ purl }}">Paper</a>{%- endif -%}
+  {%- if pub.arxiv and pub.arxiv != "" -%}<a href="https://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>{%- endif -%}
+  {%- if pub.pdf and pub.pdf != "" -%}<a href="{{ pub.pdf | relative_url }}">PDF</a>{%- endif -%}
+  {%- if pub.slidesurl and pub.slidesurl != "" -%}<a href="{{ pub.slidesurl }}">Slides</a>{%- endif -%}
+  {%- if pub.bibtexurl and pub.bibtexurl != "" -%}<a href="{{ pub.bibtexurl }}">BibTeX</a>{%- endif -%}
+{%- endcapture -%}
+{%- if pub_links != "" -%}<p class="pub-links">{{ pub_links }}</p>{%- endif -%}

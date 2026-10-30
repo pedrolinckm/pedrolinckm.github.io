@@ -20,49 +20,72 @@ Os dados são completados pelo Crossref (autores, revista, volume, resumo) e pel
 - Arquivos criados pelo sincronizador têm `auto_sync: true` e são atualizados sozinhos.
 - Arquivos escritos à mão **não são sobrescritos**. Exceção: se um trabalho `inpreparation` ou `preprints` sair publicado, ele é promovido (mudam só `category`, `venue`, `date`, `paperurl`, `doi` e `citation`; título, resumo e texto ficam). Para travar um arquivo, ponha `auto_sync: false` nele.
 - Nada é apagado. Para esconder algo, adicione o título, DOI ou ID do arXiv em `_data/publications_ignore.yml`.
-- Trabalhos "em preparação" continuam manuais: crie o arquivo com `category: inpreparation`.
+- Trabalhos "em preparação" continuam manuais: crie o arquivo em `_publications/` com `category: inpreparation`. A extensão precisa ser **`.md`** (com `.txt` a página não abre). Equações no resumo vão entre `$$ ... $$`, e não use `\%` (escreva só `%`).
 
-## Notas de aula (arrastar e soltar)
+## Slides e notas de aula (arrastar e soltar)
 
-Cada curso tem uma pasta em `lecture-notes/`. Para adicionar uma nota:
+Cada disciplina tem uma pasta própria em `lecture-notes/`:
 
-1. No GitHub, abra `lecture-notes/<curso>/`.
+| Disciplina | Pasta |
+|---|---|
+| Física Geral 1 | `lecture-notes/fisica-geral-1/` |
+| Física Geral 2 | `lecture-notes/fisica-geral-2/` |
+| Elementos de Física | `lecture-notes/elementos-de-fisica/` |
+| Física Experimental L2 | `lecture-notes/fisica-experimental-l2/` |
+| Física L1 | `lecture-notes/fisica-l1/` |
+| Física Experimental 1 | `lecture-notes/fisica-experimental-1/` |
+| Física Experimental 2 | `lecture-notes/fisica-experimental-2/` |
+| Física Experimental L1 | `lecture-notes/fisica-experimental-l1/` |
+| Laboratório de Física Moderna L2 | `lecture-notes/laboratorio-fisica-moderna-l2/` |
+| Cálculo 1 | `lecture-notes/calculo-1/` |
+| Geometria Analítica 1 | `lecture-notes/geometria-analitica-1/` |
+| Cálculo 3 | `lecture-notes/calculo-3/` |
+| Cálculo 4 | `lecture-notes/calculus-4/` |
+| Álgebra Linear 1 | `lecture-notes/linear-algebra/` |
+
+Para adicionar slides ou notas:
+
+1. No GitHub (site), abra a pasta da disciplina.
 2. *Add file > Upload files*, arraste os PDFs, *Commit changes*.
 
-Pronto: em um ou dois minutos o PDF aparece na página do curso. O título é o nome do arquivo e a ordem é por nome, com números comparados como números:
+Ou, no computador: copie os PDFs para a pasta dentro do repositório e faça commit e push no GitHub Desktop.
+
+Em um ou dois minutos eles aparecem na página da disciplina, e a página Teaching mostra quantos arquivos cada uma tem. O título de cada item é o nome do arquivo e a ordem é por nome, com números comparados como números:
 
 | Nome do arquivo | Aparece como |
 |---|---|
-| `lecture-3.pdf` | Lecture 3 |
-| `03 - Espaços vetoriais.pdf` | 03 - Espaços vetoriais |
+| `Aula 03 - Leis de Newton.pdf` | Aula 03 - Leis de Newton |
+| `Slides 02 - Cinematica.pdf` | Slides 02 - Cinematica |
 | `lista_de_exercicios_1.pdf` | Lista de exercicios 1 |
 
-Para renomear ou remover, renomeie ou apague o arquivo.
+Dica: comece os nomes com o tipo e um número (`Aula 01`, `Lista 01`, `Slides 01`) para que fiquem agrupados e em ordem.
 
-### Curso novo
+### Disciplina nova
 
-1. Crie `_teaching/<nome-do-curso>.md`:
+1. Copie qualquer arquivo de `_teaching/` com um nome novo, por exemplo `_teaching/mecanica-quantica-1.md`, e ajuste o cabeçalho:
 
-   ```markdown
+   ```yaml
    ---
-   title: "Mecânica Quântica 1"
+   title: "Quantum Mechanics 1"
+   title_pt: "Mecânica Quântica 1"
    collection: teaching
-   type: "Undergraduate course"
-   permalink: /teaching/quantum-mechanics-1/
-   venue: "Universidade Federal de Pernambuco, Physics Department"
-   location: "Recife, Brazil"
-   excerpt: "Lecture notes and problem sets."
-   lecture_notes: quantum-mechanics-1
+   type: Undergraduate course
+   department: physics          # ou math
+   venue: Universidade Federal de Pernambuco, Physics Department
+   location: Recife, Brazil
+   semesters: ['2027.1']
+   date: 2027-03-01             # início do semestre mais recente (define a ordem)
+   permalink: /teaching/mecanica-quantica-1/
+   excerpt: Uma frase sobre a disciplina.
+   lecture_notes: mecanica-quantica-1
    ---
-
-   Descrição do curso.
-
-   ## Lecture notes
-
-   {% include lecture-notes.html %}
    ```
 
-2. Suba os PDFs em `lecture-notes/quantum-mechanics-1/` (o upload cria a pasta).
+2. Suba os PDFs em `lecture-notes/mecanica-quantica-1/`.
+
+Se der a mesma disciplina de novo, basta acrescentar o semestre em `semesters` e atualizar `date`.
+
+As monitorias e minicursos ficam em `_data/teaching_other.yml`.
 
 ### Notas antigas nos Releases
 
@@ -78,14 +101,14 @@ Cada simulação é um arquivo em `_simulations/` mais um script em `assets/simu
 
 Para adicionar uma:
 
-1. Crie `assets/simulations/minha-simulacao.js`. O script procura o próprio bloco pela `id` e pode usar os utilitários de `assets/simulations/sim-common.js` (`Sim.fitCanvas`, `Sim.colors`, `Sim.onThemeChange`, `Sim.bindRange` e outros), que já cuidam de tela retina e do modo escuro. Os quatro scripts existentes servem de modelo.
+1. Crie `assets/simulations/minha-simulacao.js`. O script procura o próprio bloco pela `id` e pode usar os utilitários de `assets/simulations/sim-common.js` (`Sim.fitCanvas`, `Sim.colors`, `Sim.onThemeChange`, `Sim.bindRange` e outros), que já cuidam de tela retina e do modo escuro. Os scripts existentes servem de modelo.
 2. Crie `_simulations/minha-simulacao.md`:
 
    ```markdown
    ---
    title: "Nome da simulação"
    excerpt: "Uma ou duas frases que aparecem no cartão da galeria."
-   order: 5
+   order: 6
    thumbnail: /images/simulations/minha-simulacao.png
    sim_script: minha-simulacao.js
    ---

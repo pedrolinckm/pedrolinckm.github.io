@@ -1,0 +1,11 @@
+{%- assign pub = include.pub -%}
+{%- assign has_paper = false -%}{%- if pub.paperurl and pub.paperurl != "" -%}{%- assign has_paper = true -%}{%- endif -%}
+<p class="pub-meta">
+{%- if pub.category == "inpreparation" -%}
+  Manuscript in preparation
+{%- elsif pub.category == "preprints" -%}
+  Preprint{% if pub.venue and pub.venue != "" %}, <i>{{ pub.venue }}</i>{% endif %}, {{ pub.date | date: "%Y" }}
+{%- else -%}
+  Published in <i>{{ pub.venue }}</i>, {{ pub.date | date: "%Y" }}
+{%- endif -%}
+</p>
